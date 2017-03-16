@@ -38,20 +38,6 @@
 **v1.1** UDP版，主要负责重新搭建框架，创建UDP Socket 
 **v1.2** 状态机版，主要根据不同的输入转到不同状态进行处理
 TCP测试版：模拟网关进行数据发送，测试接收端稳定性和准确性
-``` seq
-Title: 接收端序列图
-mainWindow->myServer: 初始化（）
-myServer->ini配置文件: 读取配置文件信息
-myServer->dbServer:建立数据库连接
-myServer->myServer: 监听端口
-myServer->myThread: 新连接到来
-myThread->myThread: 接收数据
-myThread->myThread:原始数据本地存储
-myThread->tool: 数据解析
-myThread->dbServer: 数据存储数据库
-myThread->myServer: 界面信息传递
-myServer->mainWindow:界面显示
-```
 
 ## 2. 能量收集模块
 ### 项目简介
